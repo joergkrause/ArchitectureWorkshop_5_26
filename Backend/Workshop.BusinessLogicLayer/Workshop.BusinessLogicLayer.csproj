@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Workshop.DataAccessLayer\Workshop.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Workshop.DataTransferObjects\Workshop.DataTransferObjects.csproj" />
+    <ProjectReference Include="..\Workshop.DomainModels\Workshop.DomainModels.csproj" />
+  </ItemGroup>
+
 </Project>
