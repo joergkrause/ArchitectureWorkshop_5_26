@@ -13,4 +13,7 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/Workshop.UnitTests/Workshop.UnitTests.csproj" Id="b8ef5345-9bc9-42b6-b31f-d8678917bfe5" />
+  </Folder>
 </Solution>

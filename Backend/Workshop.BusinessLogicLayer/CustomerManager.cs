@@ -6,7 +6,7 @@ using Workshop.DataTransferObjects;
 
 namespace Workshop.BusinessLogicLayer;
 
-public class CustomerManager(IServiceProvider serviceProvider) : Manager(serviceProvider), ICustomerManager
+public class CustomerManager(IServiceProvider serviceProvider) : Manager(serviceProvider), ICustomerManager, IReadonlyCustomerManager
 {
 
   public async Task<IEnumerable<CustomerDto>> GetAllCustomers()
@@ -30,5 +30,9 @@ public class CustomerManager(IServiceProvider serviceProvider) : Manager(service
     return dto;
   }
 
+  public async Task CreateCustomer(CustomerCreateDto dto)
+  {
+    // TODO
+  }
 
 }
