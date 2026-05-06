@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Backend/">
+    <Project Path="Backend/Workshop.BusinessLogicLayer/Workshop.BusinessLogicLayer.csproj" />
+    <Project Path="Backend/Workshop.DataAccessLayer/Workshop.DataAccessLayer.csproj" />
+    <Project Path="Backend/Workshop.DataTransferObjects/Workshop.DataTransferObjects.csproj" />
+    <Project Path="Backend/Workshop.DomainModels/Workshop.DomainModels.csproj" />
+  </Folder>
+  <Folder Name="/Backend/SAP/" />
+  <Folder Name="/Frontend/" />
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+</Solution>
