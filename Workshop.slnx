@@ -4,6 +4,7 @@
     <Project Path="Backend/Workshop.DataAccessLayer/Workshop.DataAccessLayer.csproj" />
     <Project Path="Backend/Workshop.DataTransferObjects/Workshop.DataTransferObjects.csproj" />
     <Project Path="Backend/Workshop.DomainModels/Workshop.DomainModels.csproj" />
+    <Project Path="Backend/Workshop.RestServer/Workshop.RestServer.csproj" Id="16dd253f-6e82-4786-b87a-719904db6825" />
   </Folder>
   <Folder Name="/Backend/SAP/" />
   <Folder Name="/Frontend/" />
