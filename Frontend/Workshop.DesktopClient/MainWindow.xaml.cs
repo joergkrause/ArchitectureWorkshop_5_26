@@ -34,9 +34,9 @@ namespace Workshop.DesktopClient
       try
       {
         var restCustomers = await _restClient.GetAllAsync();
-        //var grpcCustomers = await _grpcClient.GetAllCustomersAsync(new Workshop.GrpcServer.CustomersRequest());
+        var grpcCustomers = await _grpcClient.GetAllCustomersAsync(new Workshop.GrpcServer.CustomersRequest());
         RestTextBlock.Text = "REST Customers:\n" + string.Join("\n", restCustomers.Select(c => $"{c.Id}: {c.CustomerName}"));
-        //GrpcTextBlock.Text = "gRPC Customers:\n" + string.Join("\n", grpcCustomers.Customers.Select(c => $"{c.Id}: {c.Name}"));
+        GrpcTextBlock.Text = "gRPC Customers:\n" + string.Join("\n", grpcCustomers.Customers.Select(c => $"{c.Id}: {c.Name}"));
       }
       catch (Exception ex)
       {
