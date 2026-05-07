@@ -42,7 +42,12 @@ public class CustomerDetailsDto : CustomerDto
   }
 }
 
-public class  CustomerCreateDto
+public class CustomerUpdateDto : CustomerDetailsDto
+{
+  // TODO
+}
+
+public class  CustomerCreateDto : CustomerDetailsDto
 {
   // TODO
 }
