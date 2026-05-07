@@ -1,5 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
+using System.Reflection.Metadata.Ecma335;
 using Workshop.DataAccessLayer;
 
 namespace Workshop.RestServer
@@ -23,14 +25,25 @@ namespace Workshop.RestServer
 
       builder.Services.AddControllers();
       // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-      builder.Services.AddOpenApi();
+      builder.Services.AddOpenApi("v1", options =>
+      {
+        options.AddDocumentTransformer((doc, ctx, ct) =>
+        {
+          doc.Info.Title = "Workshop REST API";
+          doc.Info.Version = "v1";
+          doc.Info.Description = "A RESTful API for managing customers, products, and orders in the Workshop application.";
+
+          return Task.CompletedTask;
+        });
+      });
 
       var app = builder.Build();
 
       // Configure the HTTP request pipeline.
       if (app.Environment.IsDevelopment())
       {
-        app.MapOpenApi();
+        app.MapOpenApi(); // json
+        app.MapScalarApiReference();
       }
 
       app.UseHttpsRedirection();

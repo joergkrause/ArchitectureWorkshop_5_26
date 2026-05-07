@@ -1,3 +1,4 @@
+using Workshop.ServiceClients;
 using Workshop.WebClient.Components;
 
 namespace Workshop.WebClient
@@ -9,6 +10,11 @@ namespace Workshop.WebClient
       var builder = WebApplication.CreateBuilder(args);
 
       // Add services to the container.
+      var httpClient = new HttpClient();
+      httpClient.BaseAddress = new Uri("http://localhost:5049");
+      var client = new RestClient(httpClient);
+      builder.Services.AddSingleton(client);
+
       builder.Services.AddRazorComponents()
           .AddInteractiveServerComponents();
 
