@@ -8,7 +8,12 @@
     <Project Path="Backend/Workshop.RestServer/Workshop.RestServer.csproj" Id="16dd253f-6e82-4786-b87a-719904db6825" />
   </Folder>
   <Folder Name="/Backend/SAP/" />
-  <Folder Name="/Frontend/" />
+  <Folder Name="/Frontend/">
+    <Project Path="Frontend/Workshop.DesktopClient/Workshop.DesktopClient.csproj" Id="795b05df-b8cb-43b6-9715-695320588567" />
+    <Project Path="Frontend/Workshop.ServiceClients/Workshop.ServiceClients.csproj" Id="df7c1912-1829-4554-9c0c-d56ea597794e" />
+    <Project Path="Frontend/Workshop.WebClient/Workshop.WebClient.csproj" Id="de6cd6a0-9709-4b1c-89e3-73accea45cef" />
+    <Project Path="Workshop.TestConsole/Workshop.TestConsole.csproj" Id="a5f9f53b-2813-4c96-975c-f2b7db124ca9" />
+  </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
