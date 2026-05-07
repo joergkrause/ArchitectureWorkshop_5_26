@@ -15,4 +15,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Workshop.BusinessLogicLayer\Workshop.BusinessLogicLayer.csproj" />
+    <ProjectReference Include="..\Workshop.DataAccessLayer\Workshop.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Workshop.DataTransferObjects\Workshop.DataTransferObjects.csproj" />
+  </ItemGroup>
+
 </Project>

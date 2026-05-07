@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Workshop.DataAccessLayer;
 using Workshop.GrpcServer.Services;
 
 namespace Workshop.GrpcServer
@@ -9,6 +11,16 @@ namespace Workshop.GrpcServer
       var builder = WebApplication.CreateBuilder(args);
 
       // Add services to the container.
+      builder.Services.AddDbContext<WorkshopContext>(options =>
+      {
+#if DEBUG
+        options.EnableDetailedErrors();
+        options.EnableSensitiveDataLogging();
+#endif
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+      });
+      builder.Services.AddManagers();
+
       builder.Services.AddGrpc();
 
       var app = builder.Build();
