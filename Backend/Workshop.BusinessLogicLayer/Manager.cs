@@ -9,5 +9,7 @@ public abstract class Manager(IServiceProvider serviceProvider)
 
   protected WorkshopContext Context => _context;
 
+  // protected ServerRestClient Client => _client;
+
   //protected ICustomerRepository CustomerRepository => serviceProvider.GetRequiredService<ICustomerRepository>();
 }
