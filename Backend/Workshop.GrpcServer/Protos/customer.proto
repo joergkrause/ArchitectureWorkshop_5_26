@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option csharp_namespace = "Workshop.GrpcServer";
+
+package customer;
+
+// The customer service definition.
+service CustomerService {
+  // Retrieves all customers
+  rpc GetAllCustomers (CustomersRequest) returns (CustomersReply);
+  // Retrieves a customer by ID
+  rpc GetCustomerById (CustomerRequest) returns (CustomerDetailReply);
+  // Creates a new customer
+  rpc CreateCustomer (CreateCustomerRequest) returns (CustomerReply);
+}
+
+message CustomersRequest {
+}
+
+message CustomersReply {
+  repeated CustomerReply customers = 1;
+}
+
+message CustomerRequest {
+  int32 id = 1;
+}
+
+message CustomerReply {
+  int32 id = 1;
+  string number = 2;
+  string name = 3;
+}
+
+message CustomerDetailReply {
+  int32 id = 1;
+  string number = 2;
+  string name = 3;
+  string city = 4;
+  string address = 5;
+}
+
+message CreateCustomerRequest {
+  string name = 1;
+  string number = 2;
+  string city = 3;
+  string address = 4;
+
+}
