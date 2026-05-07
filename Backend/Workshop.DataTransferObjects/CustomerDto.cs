@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Workshop.DomainModels;
 
 namespace Workshop.DataTransferObjects;
@@ -5,8 +6,11 @@ namespace Workshop.DataTransferObjects;
 public class CustomerDto
 {
   public int Id { get; set; }
-  public string Number { get; set; } = default!;
 
+  [JsonPropertyName("customerNumber")]
+  public string Number { get; set; } = default!;
+  
+  [JsonPropertyName("customerName")]
   public string Name { get; set; } = default!;
 
   public static CustomerDto CreateCustomerDto(Customer model)

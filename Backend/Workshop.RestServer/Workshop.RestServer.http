@@ -1,6 +1,6 @@
 @Workshop.RestServer_HostAddress = http://localhost:5291
 
-GET {{Workshop.RestServer_HostAddress}}/weatherforecast/
+GET {{Workshop.RestServer_HostAddress}}/api/customer
 Accept: application/json
 
 ###
